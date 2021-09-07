@@ -58,17 +58,32 @@ void createboard(int array[3][3][3]){
 };
 }
 
-void getUserInput(){
+int getUserInput(){
 	int userInp;
 	scanf("Type the position you want to mark:%d", userInp);
-	
+	return userInp;
 }
 
+int getComputerInput(int compPosition, int userPosition, int userArray[], int compArray[]){
+	if compPosition == 0
+		return 14
+	else{
+		return 45-(userArray[userPosition]+userArray[userPosition])
+	} 
+}
 void playTTT(int array[3][3][3]){
     createboard(array);
 	printArray(array);
-}
+	int userArray[30];
+	int compArray[30];
+	int user = 0;
+	int comp = 0;
+	int userCollinerLines = 0;
+	int compCollinearLines = 0;
+	userArray[user] = getUserInput();
+	compArray[comp] = getComputerInput();
 
+}
 
 void main()
 {
