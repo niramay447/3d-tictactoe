@@ -17,7 +17,6 @@ for(int i=0;i<3;i++)
 		printf("\n");
 	};
 	printf("\n");
-};
 }
 
 
@@ -92,7 +91,7 @@ int getComputerInput(int compPosition, int userPosition,int compArray[30] ,int u
 	}
 }
 
-bool is_empty(int array[3][3][3], int position){
+int is_empty(int array[3][3][3], int position){
 /* this function takes the board and a integer position as the inputs
 and returns true if that position is empty*/
 }
@@ -129,7 +128,7 @@ void playTTT(int array[3][3][3]){
 	int comp = 0;
 	int userCollinerLines = 0;
 	int compCollinearLines = 0;
-	while (userCollinerLines<10 or compCollinearLines<10){
+	while (userCollinerLines<10 && compCollinearLines<10){
 		userArray[user] = getUserInput();
 		compArray[comp] = getComputerInput();
 
